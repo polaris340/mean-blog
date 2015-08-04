@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "root",
+    "password": "ira144341",
+    "database": "blogdb_dev",
+    "host": "jiho-me-blog.cwsbso5b4f2c.us-west-1.rds.amazonaws.com",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": "ira144341",
+    "database": "blogdb_test",
+    "host": "jiho-me-blog.cwsbso5b4f2c.us-west-1.rds.amazonaws.com",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": "ira144341",
+    "database": "blogdb",
+    "host": "jiho-me-blog.cwsbso5b4f2c.us-west-1.rds.amazonaws.com",
+    "dialect": "mysql"
+  }
+}

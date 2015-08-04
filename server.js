@@ -1,3 +1,5 @@
-var app = require('./app.js');
+var app = require('./app');
 
-app.listen(80);
+app.models.sequelize.sync().then(function() {
+    app.app.listen(80);
+});

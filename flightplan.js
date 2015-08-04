@@ -13,7 +13,6 @@ plan.target('deploy', [
 ]);
 
 plan.local(function (local) {
-
     var filesToCopy = local.exec('git ls-files', {silent: true});
     local.transfer(filesToCopy, REMOTE_PROJECT_DIR);
 });

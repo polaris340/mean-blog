@@ -1,8 +1,13 @@
 var express = require('./config/express');
-
+var models = require('./models')
 var app = express();
 
-app.listen(3000);
-console.log('server running...');
+models.sequelize.sync().then(function() {
+    app.listen(3000);
+    console.log('server running...');
+});
 
-module.exports = app;
+module.exports = {
+    models: models,
+    app: app
+};
