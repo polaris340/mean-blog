@@ -4,20 +4,29 @@
     "password": "ira144341",
     "database": "blogdb_dev",
     "host": "jiho-me-blog.cwsbso5b4f2c.us-west-1.rds.amazonaws.com",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "define": {
+      "underscored": true
+    }
   },
   "test": {
     "username": "root",
     "password": "ira144341",
     "database": "blogdb_test",
     "host": "jiho-me-blog.cwsbso5b4f2c.us-west-1.rds.amazonaws.com",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "define": {
+      "underscored": true
+    }
   },
   "production": {
     "username": "root",
     "password": "ira144341",
     "database": "blogdb",
     "host": "jiho-me-blog.cwsbso5b4f2c.us-west-1.rds.amazonaws.com",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "define": {
+      "underscored": true
+    }
   }
 }

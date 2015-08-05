@@ -2,6 +2,8 @@
 var plan = require('flightplan');
 
 var REMOTE_PROJECT_DIR = '/home/ubuntu/blog';
+var envvars = require('./envvars');
+
 
 plan.target('deploy', [
     {
@@ -18,6 +20,9 @@ plan.local(function (local) {
 });
 
 plan.remote(function (remote) {
+    for (var key in envvars) {
+        remote.sudo('export ' + key + '=' + envvars[key]);
+    }
     remote.exec('cd ' + REMOTE_PROJECT_DIR + ' && npm install');
     remote.sudo('forever stopall');
     remote.sudo('forever start ' + REMOTE_PROJECT_DIR + '/server.js');
