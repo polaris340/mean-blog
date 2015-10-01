@@ -1,0 +1,8 @@
+@import "_dimens.scss";
+
+body[ng-app] {
+  @media screen and (min-width: $sidebar-screen-width) {
+    padding-right: $sidebar-width;
+  }
+}
+

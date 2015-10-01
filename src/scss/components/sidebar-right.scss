@@ -1,0 +1,22 @@
+@import "../_colors.scss";
+@import "../_dimens.scss";
+
+.sidebar-right {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: $sidebar-width;
+  height: 100%;
+  overflow: auto;
+  background-color: $sidebar-background;
+
+  @media screen and (max-width: $sidebar-screen-width) {
+    display: none;
+  }
+
+  .sidebar-header {
+    width: 100%;
+    background-color: white;
+    overflow: auto;
+  }
+}

@@ -8,8 +8,8 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: 'src/scss',
-                    src: '*.scss',
-                    dest: 'src/css',
+                    src: '**/*.scss',
+                    dest: '.tmp/css',
                     ext: '.css'
                 }]
             }
@@ -20,11 +20,49 @@ module.exports = function(grunt) {
             }
         },
         watch: {
+            options: {
+                livereload: true
+            },
+            css: {
+                files: ['.tmp/css/**/*.css'],
+                tasks: ['concat:css'],
+                options: {
+                    liverelaod: true
+                }
+            },
             sass: {
-                files: ['**/*.scss'],
-                tasks: ['sass:dev', 'recess:dev'],
+                files: ['src/**/*.scss'],
+                tasks: ['sass:dev'],
+                options: {
+                    livereload: false
+                }
+            },
+            ts: {
+                files: ['src/**/*.ts'],
+                tasks: ['typescript:base'],
+                options: {
+                    livereload: false
+                }
+            },
+            js: {
+                files: ['src/**/*.js'],
                 options: {
                     livereload: true
+                }
+            }
+        },
+        concat: {
+            css: {
+                src: ['.tmp/css/**/*.css'],
+                dest: 'src/css/style.css'
+            }
+        },
+        typescript: {
+            base: {
+                src: ['src/**/*.ts'],
+                dest: 'src/js/app.js',
+                options: {
+                    target: 'es5'
                 }
             }
         }
@@ -34,8 +72,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-recess');
+    grunt.loadNpmTasks('grunt-typescript');
+    grunt.loadNpmTasks('grunt-contrib-concat');
 
     // Default task(s).
-    grunt.registerTask('default', ['watch:sass']);
-
+    grunt.registerTask('default', ['sass:dev', 'concat:css', 'typescript:base', 'watch']);
 };

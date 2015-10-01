@@ -3,25 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>jiho.me</title>
-    <link rel="stylesheet" href="../bower_components/angular-material/angular-material.min.css"/>
-    <link rel="stylesheet" href="../bower_components/components-font-awesome/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="../bower_components/Ionicons/css/ionicons.min.css" />
 
     <script src="//localhost:35729/livereload.js"></script>
 </head>
 <body ng-app="BlogApp">
 
-<ng-view></ng-view>
+<ui-view></ui-view>
+<menu-button></menu-button>
 
 <script src="../bower_components/angular/angular.min.js"></script>
-<script src="../bower_components/angular-route/angular-route.min.js"></script>
-<script src="../bower_components/angular-animate/angular-animate.min.js"></script>
-<script src="../bower_components/angular-aria/angular-aria.min.js"></script>
-<script src="../bower_components/angular-material/angular-material.min.js"></script>
-
+<script src="../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 <script src="js/app.js"></script>
-
-<script src="js/controllers/TimelineController.js"></script>
 
 </body>
 </html>

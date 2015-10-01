@@ -1,0 +1,33 @@
+search-box {
+  display: inline-block;
+  overflow: auto;
+  & > div {
+    display: inline-block;
+    width: 312px;
+    box-sizing: border-box;
+
+    .input-box {
+      border-bottom: 1px solid #ccc;
+      line-height: 40px;
+      margin: 16px 0 16px 16px;
+      white-space: nowrap;
+
+      .icon {
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        font-size: 1.3rem;
+        display: inline-block;
+      }
+
+      input {
+        width: 250px;
+        line-height: 40px;
+        border: none;
+        padding: 0;
+        margin: 0;
+        font-size: inherit;
+      }
+    }
+  }
+}

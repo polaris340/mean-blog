@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAGE,qCAAqD;EADvD,YAAa;IAET,aAAa,ECJD,KAAK",
+"sources": ["../../src/scss/main.scss","../../src/scss/_dimens.scss"],
+"names": [],
+"file": "main.css"
+}

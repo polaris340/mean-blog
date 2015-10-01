@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAGA,cAAe;EACb,QAAQ,EAAE,KAAK;EACf,GAAG,EAAE,CAAC;EACN,KAAK,EAAE,CAAC;EACR,KAAK,ECPS,KAAK;EDQnB,MAAM,EAAE,IAAI;EACZ,QAAQ,EAAE,IAAI;EACd,gBAAgB,EEVG,OAAO;EFY1B,qCAAqD;IATvD,cAAe;MAUX,OAAO,EAAE,IAAI;EAGf,8BAAgB;IACd,KAAK,EAAE,IAAI;IACX,gBAAgB,EAAE,KAAK;IACvB,QAAQ,EAAE,IAAI",
+"sources": ["../../../src/scss/components/sidebar-right.scss","../../../src/scss/_dimens.scss","../../../src/scss/_colors.scss"],
+"names": [],
+"file": "sidebar-right.css"
+}

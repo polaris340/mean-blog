@@ -1,0 +1,13 @@
+.sidebar-right {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100%;
+  overflow: auto;
+  background-color: #fafafa; }
+  @media screen and (max-width: 1200px) {
+    .sidebar-right {
+      display: none; } }
+
+/*# sourceMappingURL=sidebar-right.css.map */

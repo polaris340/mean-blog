@@ -1,0 +1,16 @@
+profile-button {
+  display: inline-block;
+  overflow: auto;
+  & > div {
+    display: inline-block;
+    .image {
+      width: 40px;
+      height: 40px;
+      margin: 16px;
+      display: inline-block;
+      border-radius: 50%;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+}
